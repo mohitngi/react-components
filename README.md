@@ -4,8 +4,8 @@ A modern, accessible React component library built with TypeScript, Tailwind CSS
 
 ## 🚀 Live Demo
 
-- **Component Showcase**: [View Live Demo](http://localhost:5173)
-- **Storybook Documentation**: [View Storybook](http://localhost:6006)
+- **Component Showcase**: [View Live Demo]()
+- **Storybook Documentation**: [View Storybook](https://68a0bc5a0b16868f01350b80-wrziefagir.chromatic.com/)
 
 ## 📦 Components
 

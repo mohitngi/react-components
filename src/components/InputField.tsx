@@ -147,12 +147,12 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
             {...props}
           />
 
-          {/* Loading icon */}
+          {/* Loading icon - simple circular arrow */}
           {loading && (
             <span className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400">
-              <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+              <svg className="animate-spin h-5 w-5" viewBox="0 0 20 20" fill="none">
+                <path d="M10 3a7 7 0 1 1-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <path d="M3 3v4h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               </svg>
             </span>
           )}

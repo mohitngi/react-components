@@ -57,21 +57,33 @@ Our Storybook implementation includes all required documentation elements:
 ## 🚀 Running Storybook
 
 ### Development
-\`\`\`bash
+```bash
+# Using pnpm (recommended)
+pnpm storybook
+
+# Or using npm
 npm run storybook
-\`\`\`
+```
 Starts Storybook development server on http://localhost:6006
 
 ### Build
-\`\`\`bash
+```bash
+# Using pnpm (recommended)
+pnpm build-storybook
+
+# Or using npm
 npm run build-storybook
-\`\`\`
+```
 Builds static Storybook for deployment
 
 ### Serve Built Version
-\`\`\`bash
+```bash
+# Using pnpm (recommended)
+pnpm storybook:serve
+
+# Or using npm
 npm run storybook:serve
-\`\`\`
+```
 Serves the built Storybook locally
 
 ## 📖 Story Structure
@@ -144,7 +156,7 @@ Serves the built Storybook locally
 
 When adding new components, follow this structure:
 
-\`\`\`tsx
+```tsx
 import type { Meta, StoryObj } from "@storybook/react"
 import { YourComponent } from "./your-component"
 
@@ -172,6 +184,6 @@ export const Default: Story = {
     // Default props
   }
 }
-\`\`\`
+```
 
 This ensures consistent documentation across all components.

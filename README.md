@@ -22,14 +22,15 @@ A flexible and accessible input component with multiple variants, states, and in
 - **TypeScript**: Complete type safety with IntelliSense
 
 **Usage:**
-\`\`\`tsx
+```tsx
+// Basic usage with common props
 <InputField
   label="Email Address"
   placeholder="Enter your email"
   helperText="We'll never share your email"
   showClearButton
 />
-\`\`\`
+```
 
 ### DataTable
 A comprehensive data table component with sorting, selection, and state management.
@@ -44,57 +45,79 @@ A comprehensive data table component with sorting, selection, and state manageme
 - **Responsive**: Mobile-friendly design
 
 **Usage:**
-\`\`\`tsx
+```tsx
+// Example with data and column configuration
 <DataTable
   data={users}
   columns={[
-    { key: 'name', header: 'Name', sortable: true },
-    { key: 'email', header: 'Email', sortable: true }
+    { 
+      key: 'name', 
+      header: 'Name', 
+      sortable: true 
+    },
+    { 
+      key: 'email', 
+      header: 'Email', 
+      sortable: true 
+    }
   ]}
   selectable
   onRowSelect={(rows) => handleSelection(rows)}
 />
-\`\`\`
+```
 
 ## 🛠️ Development
 
 ### Prerequisites
 - Node.js 18+ 
-- npm or yarn
+- Package Manager: pnpm (recommended) or npm
 
 ### Setup
-\`\`\`bash
-# Clone the repository
+```bash
+# 1. Clone the repository
 git clone <repository-url>
 cd react-component-library
 
-# Install dependencies
-npm install
+# 2. Install dependencies
+pnpm install   
+# OR
+npm install     
 
-# Start development server
-npm run dev
-\`\`\`
+# 3. Start development server 
+pnpm dev       
+# OR
+npm run dev    
+```
 
 ### Available Scripts
 
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Start Vite development server |
-| `npm run build` | Build production application |
-| `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint |
-| `npm run storybook` | Start Storybook development server |
-| `npm run build-storybook` | Build Storybook for deployment |
-| `npm run storybook:serve` | Serve built Storybook locally |
+| Script | pnpm | npm |
+|--------|------|-----|
+| Start dev server | `pnpm dev` | `npm run dev` |
+| Build production | `pnpm build` | `npm run build` |
+| Preview production | `pnpm preview` | `npm run preview` |
+| Run ESLint | `pnpm lint` | `npm run lint` |
+| Start Storybook | `pnpm storybook` | `npm run storybook` |
+| Build Storybook | `pnpm build-storybook` | `npm run build-storybook` |
+| Serve Storybook | `pnpm storybook:serve` | `npm run storybook:serve` |
 
 ### Storybook Development
-\`\`\`bash
-# Start Storybook
-npm run storybook
+```bash
+# Start Storybook in development mode
+pnpm storybook       
+# OR
+npm run storybook    
 
-# Build for deployment
+# Build Storybook for production
+pnpm build-storybook
+# OR
 npm run build-storybook
-\`\`\`
+
+# Preview production build locally
+pnpm storybook:serve
+# OR
+npm run storybook:serve
+```
 
 ## 📚 Documentation
 
@@ -161,44 +184,49 @@ Our components use a carefully crafted color system:
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
-\`\`\`bash
+```bash
 # Build the project
+pnpm build  
+# or 
 npm run build
 
 # Deploy to Vercel
 npx vercel --prod
-\`\`\`
+```
 
 ### Netlify
-\`\`\`bash
+```bash
 # Build the project
+pnpm build  
+# or 
 npm run build
 
 # Deploy dist folder to Netlify
-\`\`\`
+netlify deploy --prod --dir=dist
+```
 
-### Storybook Deployment
+## 📖Storybook Deployment 
 
-#### Chromatic
-\`\`\`bash
+#### Chromatic (Recommended)
+```bash
 # Install Chromatic
 npm install --save-dev chromatic
 
 # Deploy to Chromatic
 npx chromatic --project-token=<your-token>
-\`\`\`
+```
 
 #### Vercel
-\`\`\`bash
+```bash
 # Build Storybook
 npm run build-storybook
 
 # Deploy storybook-static folder to Vercel
-\`\`\`
+```
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 ├── src/                      # Source code
 │   ├── components/          # React components
 │   │   ├── InputField.tsx   # InputField component
@@ -220,7 +248,7 @@ npm run build-storybook
 ├── vite.config.ts         # Vite configuration
 ├── tailwind.config.js     # Tailwind configuration
 └── tsconfig.json          # TypeScript configuration
-\`\`\`
+```
 
 
 ### Component Development Guidelines

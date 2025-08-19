@@ -43,8 +43,7 @@ Our Storybook implementation includes all required documentation elements:
 - Screen reader compatibility
 - Focus management
 
-### ✅ Theming & Responsiveness
-- Light and dark mode support
+### ✅ Responsive Design
 - Responsive behavior examples
 - Design token usage
 

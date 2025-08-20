@@ -1,5 +1,6 @@
 {
-  "name": "my-v0-project",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "react-components",
   "version": "0.1.0",
   "private": true,
   "scripts": {

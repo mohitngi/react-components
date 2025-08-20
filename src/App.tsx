@@ -171,6 +171,13 @@ function App() {
                   size="lg"
                 />
               </div>
+              <div>
+                <InputField
+                  label="ExtraLarge (xl)"
+                  placeholder="ExtraLarge input..."
+                  size="xl"
+                />
+              </div>
             </div>
           </div>
 

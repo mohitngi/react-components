@@ -12,7 +12,7 @@ export interface InputFieldProps {
   invalid?: boolean
   loading?: boolean
   variant?: "filled" | "outlined" | "ghost"
-  size?: "sm" | "md" | "lg"
+  size?: "sm" | "md" | "lg" | "xl"
   type?: "text" | "password" | "email" | "number"
   showClearButton?: boolean
   showPasswordToggle?: boolean

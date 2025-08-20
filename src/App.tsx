@@ -20,20 +20,12 @@ const sampleData: User[] = [
 
 
 function App() {
-  // State for variant examples
+  // State for input values
   const [outlinedValue, setOutlinedValue] = useState("")
   const [filledValue, setFilledValue] = useState("")
   const [ghostValue, setGhostValue] = useState("")
-  
-  // State for size examples
-  const [smallValue, setSmallValue] = useState("")
-  const [mediumValue, setMediumValue] = useState("")
-  const [largeValue, setLargeValue] = useState("")
-  
-  // State for optional features
   const [clearButtonValue, setClearButtonValue] = useState("")
   const [passwordValue, setPasswordValue] = useState("")
-  const [helperTextValue, setHelperTextValue] = useState("")
 
   const tableColumns = [
     { key: "name" as const, header: "Name", sortable: true },
@@ -55,32 +47,97 @@ function App() {
         <section className="bg-white p-6 rounded-lg shadow-sm">
           <h2 className="text-2xl font-bold mb-6">InputField Component</h2>
           
+          {/* Default with all features */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold mb-4">Default</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div>
+                <InputField
+                  label="With Label"
+                  placeholder="Type here..."
+                />
+              </div>
+              <div>
+                <InputField
+                  label="With Placeholder"
+                  placeholder="Enter your text here..."
+                />
+              </div>
+              <div>
+                <InputField
+                  label="With Helper Text"
+                  placeholder="Enter value"
+                  helperText="This is helper text"
+                />
+              </div>
+              <div>
+                <InputField
+                  label="With Error"
+                  placeholder="Invalid input"
+                  errorMessage="This field is required"
+                  invalid
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* States */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold mb-4">States</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <InputField
+                  label="Disabled"
+                  placeholder="This input is disabled"
+                  disabled
+                  value="Disabled value"
+                />
+              </div>
+              <div>
+                <InputField
+                  label="Invalid Input"
+                  placeholder="Enter a valid username"
+                  invalid
+                  errorMessage="Username must be at least 4 characters"
+                  value="abc"
+                />
+              </div>
+              <div>
+                <InputField
+                  label="Loading State"
+                  placeholder="Loading..."
+                  loading
+                />
+              </div>
+            </div>
+          </div>
+          
           {/* Variants */}
           <div className="mb-8">
             <h3 className="text-lg font-semibold mb-4">Variants</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <label className="block font-medium mb-2">Outlined (Default)</label>
                 <InputField
-                  placeholder="Outlined variant..."
+                  label="Outlined (Default)"
+                  placeholder="Type something..."
                   variant="outlined"
                   value={outlinedValue}
                   onChange={(e) => setOutlinedValue(e.target.value)}
                 />
               </div>
               <div>
-                <label className="block font-medium mb-2">Filled</label>
                 <InputField
-                  placeholder="Filled variant..."
+                  label="Filled"
+                  placeholder="Type something..."
                   variant="filled"
                   value={filledValue}
                   onChange={(e) => setFilledValue(e.target.value)}
                 />
               </div>
               <div>
-                <label className="block font-medium mb-2">Ghost</label>
                 <InputField
-                  placeholder="Ghost variant..."
+                  label="Ghost"
+                  placeholder="Type something..."
                   variant="ghost"
                   value={ghostValue}
                   onChange={(e) => setGhostValue(e.target.value)}
@@ -94,30 +151,27 @@ function App() {
             <h3 className="text-lg font-semibold mb-4">Sizes</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <label className="block font-medium mb-2">Small (sm)</label>
                 <InputField
+                  label="Small (sm)"
                   placeholder="Small input..."
                   size="sm"
-                  value={smallValue}
-                  onChange={(e) => setSmallValue(e.target.value)}
+                  helperText="Small size input field"
                 />
               </div>
               <div>
-                <label className="block font-medium mb-2">Medium (md)</label>
                 <InputField
+                  label="Medium (md)"
                   placeholder="Medium input..."
                   size="md"
-                  value={mediumValue}
-                  onChange={(e) => setMediumValue(e.target.value)}
+                  helperText="Default medium size"
                 />
               </div>
               <div>
-                <label className="block font-medium mb-2">Large (lg)</label>
                 <InputField
+                  label="Large (lg)"
                   placeholder="Large input..."
                   size="lg"
-                  value={largeValue}
-                  onChange={(e) => setLargeValue(e.target.value)}
+                  helperText="Large size input field"
                 />
               </div>
             </div>
@@ -126,65 +180,26 @@ function App() {
           {/* Optional Features */}
           <div className="mb-8">
             <h3 className="text-lg font-semibold mb-4">Optional Features</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block font-medium mb-2">With Clear Button</label>
                 <InputField
-                  placeholder="Type to show clear button..."
+                  label="Clear Button"
+                  placeholder="Type to see clear button..."
                   value={clearButtonValue}
                   onChange={(e) => setClearButtonValue(e.target.value)}
                   showClearButton
+                  helperText="Type something to see the clear button"
                 />
               </div>
               <div>
-                <label className="block font-medium mb-2">Password Toggle</label>
                 <InputField
+                  label="Password Toggle"
                   type="password"
-                  placeholder="Enter password..."
+                  placeholder="Enter your password..."
                   value={passwordValue}
                   onChange={(e) => setPasswordValue(e.target.value)}
                   showPasswordToggle
-                />
-              </div>
-              <div>
-                <label className="block font-medium mb-2">With Helper Text</label>
-                <InputField
-                  placeholder="With helper text..."
-                  value={helperTextValue}
-                  onChange={(e) => setHelperTextValue(e.target.value)}
-                  helperText="This is a helpful message"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* States */}
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold mb-4">States</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <label className="block font-medium mb-2">Disabled</label>
-                <InputField
-                  placeholder="Cannot edit"
-                  disabled
-                  value="Disabled input"
-                />
-              </div>
-              <div>
-                <label className="block font-medium mb-2">Error State</label>
-                <InputField
-                  placeholder="Invalid input..."
-                  invalid
-                  errorMessage="This field is required"
-                  value="Invalid value"
-                />
-              </div>
-              <div>
-                <label className="block font-medium mb-2">Loading State</label>
-                <InputField
-                  placeholder="Loading..."
-                  loading
-                  value="Loading state"
+                  helperText="Toggle password visibility"
                 />
               </div>
             </div>

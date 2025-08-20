@@ -22,20 +22,7 @@ const columns: Column<User>[] = [
   { key: "name", header: "Name", sortable: true },
   { key: "email", header: "Email", sortable: true },
   { key: "role", header: "Role", sortable: true },
-  {
-    key: "status",
-    header: "Status",
-    sortable: true,
-    render: (value) => (
-      <span
-        className={`px-2 py-1 rounded-full text-xs font-medium ${
-          value === "active" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
-        }`}
-      >
-        {String(value)}
-      </span>
-    ),
-  },
+  { key: "status", header: "Status", sortable: true }
 ]
 
 const meta: Meta<typeof DataTable> = {
@@ -45,7 +32,7 @@ const meta: Meta<typeof DataTable> = {
     layout: "padded",
     docs: {
       description: {
-        component: "A powerful data table component with sorting, selection, and custom rendering capabilities.",
+        component: "A powerful data table component with sorting and selection capabilities.",
       },
     },
   },
@@ -67,7 +54,7 @@ export const WithSelection: Story = {
     data: sampleData,
     columns,
     selectable: true,
-    onRowSelect: (selectedRows) => {
+    onRowSelect: (selectedRows: User[]) => {
       console.log("Selected rows:", selectedRows)
     },
   },
@@ -85,45 +72,5 @@ export const Empty: Story = {
   args: {
     data: [],
     columns,
-  },
-}
-
-export const CustomRendering: Story = {
-  args: {
-    data: sampleData,
-    columns: [
-      {
-        key: "name",
-        header: "User",
-        sortable: true,
-        render: (value, row) => (
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-medium">
-              {String(value).charAt(0)}
-            </div>
-            <div>
-              <div className="font-medium">{String(value)}</div>
-              <div className="text-sm text-muted-foreground">{row.email}</div>
-            </div>
-          </div>
-        ),
-      },
-      { key: "role", header: "Role", sortable: true },
-      {
-        key: "status",
-        header: "Status",
-        sortable: true,
-        render: (value) => (
-          <span
-            className={`px-2 py-1 rounded-full text-xs font-medium ${
-              value === "active" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
-            }`}
-          >
-            {String(value)}
-          </span>
-        ),
-      },
-    ],
-    selectable: true,
   },
 }

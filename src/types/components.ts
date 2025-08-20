@@ -24,7 +24,6 @@ export interface Column<T> {
   key: keyof T
   header: string
   sortable?: boolean
-  render?: (value: T[keyof T], row: T) => React.ReactNode
 }
 
 export interface DataTableProps<T> {

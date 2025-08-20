@@ -29,7 +29,6 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
   ) => {
     const [showPassword, setShowPassword] = React.useState(false)
     const [internalValue, setInternalValue] = React.useState(value || "")
-    const [ setIsFocused] = React.useState(false)
 
     // Update internal value when prop changes
     React.useEffect(() => {
@@ -62,7 +61,6 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
       sm: "h-8 px-2 text-sm",
       md: "h-10 px-3 text-sm",
       lg: "h-12 px-4 text-base",
-      xl: "h-14 px-6 text-base",
     }
 
     // Variant styles
@@ -91,15 +89,12 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
       sm: "text-xs",
       md: "text-sm",
       lg: "text-base",
-      xl: "text-xl",
-
     }
 
     const helperTextSizeClasses = {
       sm: "text-xs",
       md: "text-xs",
       lg: "text-sm",
-      xl: "text-xl",
     }
 
     const hasError = invalid || !!errorMessage
@@ -125,8 +120,8 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
             type={inputType}
             value={internalValue}
             onChange={handleChange}
-            onFocus={() => setIsFocused(true)}
-            onBlur={() => setIsFocused(false)}
+            onFocus={undefined}
+            onBlur={undefined}
             placeholder={placeholder}
             disabled={disabled || loading}
             aria-invalid={hasError}

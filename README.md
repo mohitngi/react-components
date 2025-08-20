@@ -156,7 +156,6 @@ Each component includes:
 - **Vite**: Fast build tool and development server
 - **Tailwind CSS**: Utility-first styling with design tokens
 - **Storybook 7**: Component documentation and visual testing
-- **Radix UI**: Accessible component primitives
 - **Lucide React**: Beautiful, customizable icons
 
 ### Color System

@@ -5,7 +5,7 @@ A modern, accessible React component library built with TypeScript, Tailwind CSS
 ## 🚀 Live Demo
 
 - **Component Showcase**: [View Live Demo](https://react-components-bay.vercel.app/)
-- **Storybook Documentation**: [View Storybook](https://68a0bc5a0b16868f01350b80-sncvnxymlk.chromatic.com/?path=/docs/components-datatable--docs)
+- **Storybook Documentation**: [View Storybook](https://68a0bc5a0b16868f01350b80-jgiwdniulc.chromatic.com/?path=/docs/components-datatable--docs)
 
 ## 📦 Components
 

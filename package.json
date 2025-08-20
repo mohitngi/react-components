@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "storybook:serve": "npx http-server storybook-static",
-    "chromatic": "npx chromatic --project-token=chpt_456c561a0e2a221"
+    "chromatic": "npx chromatic --project-token=chpt_456c561a0e2a221 --exit-once-uploaded"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

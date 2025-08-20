@@ -16,13 +16,13 @@ const Introduction = () => (
         <li>Use the Controls panel to interact with component props</li>
       </ol>
       
-      <h2 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Available Components</h2>
+      <h2 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Available Components:</h2>
       <ul style={{ marginBottom: '2rem', paddingLeft: '1.5rem' }}>
         <li style={{ marginBottom: '0.5rem' }}><strong>InputField</strong> - A versatile input component with multiple variants and states</li>
         <li><strong>DataTable</strong> - A feature-rich table component with sorting and selection</li>
       </ul>
       
-      <h2 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Requirements</h2>
+      <h2 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Requirements:</h2>
       <ul style={{ marginBottom: '2rem', paddingLeft: '1.5rem' }}>
         <li style={{ marginBottom: '0.5rem' }}>React 18 or later</li>
         <li style={{ marginBottom: '0.5rem' }}>TypeScript 4.9 or later</li>

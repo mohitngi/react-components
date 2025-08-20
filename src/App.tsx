@@ -155,7 +155,6 @@ function App() {
                   label="Small (sm)"
                   placeholder="Small input..."
                   size="sm"
-                  helperText="Small size input field"
                 />
               </div>
               <div>
@@ -163,7 +162,6 @@ function App() {
                   label="Medium (md)"
                   placeholder="Medium input..."
                   size="md"
-                  helperText="Default medium size"
                 />
               </div>
               <div>
@@ -171,7 +169,6 @@ function App() {
                   label="Large (lg)"
                   placeholder="Large input..."
                   size="lg"
-                  helperText="Large size input field"
                 />
               </div>
             </div>
@@ -188,7 +185,6 @@ function App() {
                   value={clearButtonValue}
                   onChange={(e) => setClearButtonValue(e.target.value)}
                   showClearButton
-                  helperText="Type something to see the clear button"
                 />
               </div>
               <div>
@@ -199,7 +195,6 @@ function App() {
                   value={passwordValue}
                   onChange={(e) => setPasswordValue(e.target.value)}
                   showPasswordToggle
-                  helperText="Toggle password visibility"
                 />
               </div>
             </div>

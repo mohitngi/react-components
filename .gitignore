@@ -17,8 +17,16 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # Storybook
-/storybook-static/
+.storybook-static/
+storybook-static/
+build-storybook/
 build-storybook.log
+.storybook/build/
+.storybook/public/
+.cache/
+coverage/
+coverage-*
+*.log
 
 # env files
 .env*
